@@ -22,6 +22,10 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:user_id]
 
+config :sharefest_api, SharefestApi.Authenticator,
+  issuer: "appaztecas",
+  secret_key: "fivpxAZ+mR1Ywzv3oXm8N9qacTNVA0paz/jRaTVLUYMPCgik1jL0JHH4rYV9+WWH"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

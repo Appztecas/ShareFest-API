@@ -44,6 +44,8 @@ defmodule SharefestApi.Mixfile do
       {:ex_doc,                "~> 0.14", only: :dev},
       {:excoveralls,           "~> 0.8",  only: :test},
       {:guardian,              "~> 1.0"},
+      {:comeonin,              "~> 4.0"},
+      {:bcrypt_elixir,         "~> 1.0"},
       {:distillery,            "~> 1.5", runtime: false}
     ]
   end
