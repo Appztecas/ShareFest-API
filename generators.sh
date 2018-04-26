@@ -1,5 +1,5 @@
 # Users
-mix phx.gen.json People Users users \
+mix phx.gen.json People User users \
     name:string \
     lastname:string \
     phone:string \
@@ -10,5 +10,5 @@ mix phx.gen.json People Users users \
     facebook_token:string \
     amazon_id:string \
     amazon_token:string \
-    receive_notifications:bool
+    receive_notifications:boolean
 
