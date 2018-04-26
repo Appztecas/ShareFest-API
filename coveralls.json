@@ -1,0 +1,13 @@
+{
+  "skip_files": [
+    "lib/hooks.ex",
+    "test/support",
+    "lib/sharefest_api/application.ex",
+    "lib/sharefest_api_web/endpoint.ex",
+    "lib/sharefest_api_web.ex",
+    "lib/sharefest_api_web/repo.ex",
+    "lib/sharefest_api_web/gettext.ex",
+    "lib/sharefest_api_web/router.ex",
+    "lib/sharefest_api_web/views/error_helpers.ex"
+  ]
+}
