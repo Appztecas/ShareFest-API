@@ -13,11 +13,11 @@ mix phx.gen.json People User users \
     receive_notifications:boolean
 
 mix phx.gen.json Party Event events \
-    name: string \
-    description:
+    name:string \
+    description:string \
     start_date:date \
     address:string \
     latitude:string \
     longitude:string \
     invitation_uri:string \
-    host:references:users
+    user:references:users
