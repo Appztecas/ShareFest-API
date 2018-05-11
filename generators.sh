@@ -12,3 +12,12 @@ mix phx.gen.json People Users users \
     amazon_token:string \
     receive_notifications:bool
 
+mix phx.gen.json Party Event events \
+    name: string \
+    description:
+    start_date:date \
+    address:string \
+    latitude:string \
+    longitude:string \
+    invitation_uri:string \
+    host:references:users
