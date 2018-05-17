@@ -37,6 +37,10 @@ defmodule SharefestApiWeb.AuthController do
     _sign_in(conn, phone, amazon_id, :amazon)
   end
 
+  def sign_in(conn, _params) do
+    render(conn, "error.json", %{message: "Parametros incorrectos"})
+  end
+
   defp _sign_in(conn, username, password, method) do
     Logger.info "Looking for user_name: " <> username
     with {:ok, user} <- Users.authenticate_user(username, password, method) do
@@ -50,10 +54,6 @@ defmodule SharefestApiWeb.AuthController do
       {:error, message} -> render(conn, "error.json", %{message: message})
     end
 
-  end
-
-  def sign_in(conn, _params) do
-    render(conn, "error.json", %{message: "Parametros incorrectos"})
   end
 
   def sign_out(conn, _params) do
