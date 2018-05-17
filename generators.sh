@@ -12,6 +12,7 @@ mix phx.gen.json People User users \
     amazon_token:string \
     receive_notifications:boolean
 
+# Events
 mix phx.gen.json Party Event events \
     name:string \
     description:string \
@@ -21,3 +22,21 @@ mix phx.gen.json Party Event events \
     longitude:string \
     invitation_uri:string \
     user:references:users
+
+# Suppliers
+
+mix phx.gen.json People Supplier suppliers \
+    name:string \
+    description:string \
+    area_of_service:string \
+    photo:string \
+    email:string \
+    phone:string \
+    social_account \
+    logo:string \
+    business_activity:references:business_activities
+
+mix phx.gen.json People BusinessActivity business_activities \
+    name:string
+
+
