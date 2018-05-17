@@ -18,6 +18,7 @@ defmodule SharefestApiWeb.Router do
     # Services related to Authentication
     post "/sign_in", AuthController, :sign_in
     post "/sign_out", AuthController, :sign_out
+    resources "/business_activities", BusinessActivityController, except: [:new, :edit]
   end
 
   scope "/v1", SharefestApiWeb do
