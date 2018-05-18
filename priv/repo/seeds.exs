@@ -6,7 +6,7 @@ alias SharefestApi.People.BusinessActivity
 alias SharefestApi.People.BusinessActivities
 
 # Inserting the initial catalog for business_activities
-if BusinessActivities.list_business_activities() == [] do
+if BusinessActivities.list_business_activities() == [] and Mix.env != :test do
 
   business_activities = [
     %BusinessActivity{name: "Animadores"},

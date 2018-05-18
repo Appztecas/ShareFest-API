@@ -13,7 +13,7 @@ test:
 	MIX_ENV=test mix test
 
 test.file:
-	MIX_ENV=test mix test test/${file}
+	MIX_ENV=test mix test ${file}
 
 release:
 	MIX_ENV=prod mix do compile, phx.digest, release --env=prod

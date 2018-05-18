@@ -34,7 +34,8 @@ mix phx.gen.json People Supplier suppliers \
     phone:string \
     social_account \
     logo:string \
-    business_activity:references:business_activities
+    business_activity:references:business_activities \
+    enabled:boolean
 
 mix phx.gen.json People BusinessActivity business_activities \
     name:string

@@ -25,6 +25,7 @@ defmodule SharefestApiWeb.Router do
     # pipe_through [:api, :api_auth]
     pipe_through :api
     resources "/events", EventController, except: [:new, :edit]
+    resources "/suppliers", SupplierController, except: [:new, :edit]
   end
 
 end

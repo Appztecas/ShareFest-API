@@ -8,6 +8,8 @@ defmodule SharefestApi.People.BusinessActivity do
   schema "business_activities" do
     field :name, :string
 
+    has_many :suppliers, SharefestApi.People.Supplier
+
     timestamps()
   end
 
