@@ -40,4 +40,37 @@ mix phx.gen.json People Supplier suppliers \
 mix phx.gen.json People BusinessActivity business_activities \
     name:string
 
+# Wishlist
 
+mix phx.gen.json Party Gift gifts \
+    name:string \
+    descripton:string \
+    amazon_id:string \
+    event:references:events
+
+# Amazon categories
+
+mix phx.gen.json Catalogue Amazon_categories amazon_categories \
+    name:string \
+    link:string \
+    uri_image:string
+
+# Experiences
+mix phx.gen.json Catalogue Experience experiences \
+    name:string \
+    description:string \
+    uri_image:string \
+    status:boolean \
+
+mix phx.gen.json Catalogue Experience_Product experience_products \
+    name: string \
+    description:string \
+    uri_image:string \
+    price:float \
+    experience:references:experiences
+
+mix phx.gen.json Catalogue Product_Item product_item \
+    code:string \
+    status:string \
+    experience_product:references:experience_products \
+    event:references:events

@@ -9,7 +9,7 @@ defmodule SharefestApi.ReleaseTasks do
     :ecto
   ]
 
-  def myapp, do: Application.get_application(__MODULE__)
+  def myapp, do: :sharefest_api
 
   def repos, do: Application.get_env(myapp(), :ecto_repos, [])
 
