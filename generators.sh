@@ -63,7 +63,7 @@ mix phx.gen.json Catalogue Experience experiences \
     status:boolean \
 
 mix phx.gen.json Catalogue Experience_Product experience_products \
-    name: string \
+    name:string \
     description:string \
     uri_image:string \
     price:float \
