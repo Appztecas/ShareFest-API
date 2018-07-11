@@ -5,7 +5,7 @@ defmodule SharefestApi.Repo.Migrations.CreateEvents do
     create table(:events) do
       add :name, :string
       add :description, :string
-      add :start_date, :date
+      add :start_date, :datetime
       add :address, :string
       add :latitude, :string
       add :longitude, :string

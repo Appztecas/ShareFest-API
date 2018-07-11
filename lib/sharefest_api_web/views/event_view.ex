@@ -19,13 +19,17 @@ defmodule SharefestApiWeb.EventView do
   end
 
   def render("event.json", %{event: event}) do
-    %{id: event.id,
+    %{
+      id: event.id,
       name: event.name,
       description: event.description,
       start_date: event.start_date,
       address: event.address,
       latitude: event.latitude,
       longitude: event.longitude,
-      invitation_uri: event.invitation_uri}
+      invitation_uri: event.invitation_uri,
+      feasted: event.feasted,
+      referred_code: event.referred_code
+    }
   end
 end

@@ -21,6 +21,9 @@ defmodule SharefestApi.People.User do
     field :phone, :string
     field :receive_notifications, :boolean, default: false
 
+    has_many :events, SharefestApi.Party.Event
+    has_many :guest, SharefestApi.Party.Guest
+
     timestamps()
   end
 
