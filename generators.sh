@@ -46,13 +46,15 @@ mix phx.gen.json Party Gift gifts \
     name:string \
     descripton:string \
     amazon_id:string \
-    event:references:events
+    status:string \
+    event:references:events \
+    buyer:references:users
 
 # Amazon categories
 
-mix phx.gen.json Catalogue Amazon_categories amazon_categories \
+mix phx.gen.json Catalogue GiftsCategory gift_categories \
     name:string \
-    link:string \
+    external_id:string \
     uri_image:string
 
 # Experiences

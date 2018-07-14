@@ -16,3 +16,7 @@ config :sharefest_api, SharefestApi.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: "${DATABASE_URL}",
   pool_size: 20
+
+config :sharefest_api, SharefestApi.Authenticator,
+  issuer: "appaztecas",
+  secret_key: "${AUTH_SECRET_KEY}"

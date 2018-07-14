@@ -8,7 +8,9 @@ defmodule SharefestApiWeb.Router do
   pipeline :api_auth do
     plug Guardian.Plug.Pipeline, module: SharefestApi.Authenticator,
       error_handler: SharefestApiWeb.AuthErrorHandler
-    plug Guardian.Plug.VerifySession
+    plug Guardian.Plug.VerifyHeader
+    plug Guardian.Plug.EnsureAuthenticated
+    plug Guardian.Plug.LoadResource
   end
 
   scope "/v1", SharefestApiWeb do
@@ -23,7 +25,6 @@ defmodule SharefestApiWeb.Router do
 
   scope "/v1", SharefestApiWeb do
     pipe_through [:api, :api_auth]
-    # pipe_through :api
 
     resources "/events", EventController, except: [:new, :edit] do
       resources "/guests", GuestController, except: [:new, :edit]

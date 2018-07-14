@@ -3,15 +3,17 @@ defmodule SharefestApiWeb.EventController do
 
   alias SharefestApi.Party.Event
   alias SharefestApi.Party.Events
+  alias SharefestApi.Authenticator
 
   action_fallback SharefestApiWeb.FallbackController
 
   def index(conn, _params) do
+    user = Guardian.Plug.current_resource(conn)
     events = Events.list_events()
     render(conn, "index.json", events: events)
   end
 
-  def create(conn, %{"event" => event_params}) do
+  def create(conn, %{"evento" => event_params}) do
     with {:ok, %Event{} = event} <- Events.create_event(event_params) do
       conn
       |> put_status(:created)
@@ -25,7 +27,7 @@ defmodule SharefestApiWeb.EventController do
     render(conn, "show.json", event: event)
   end
 
-  def update(conn, %{"id" => id, "event" => event_params}) do
+  def update(conn, %{"id" => id, "evento" => event_params}) do
     event = Events.get_event!(id)
 
     with {:ok, %Event{} = event} <- Events.update_event(event, event_params) do

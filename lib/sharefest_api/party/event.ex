@@ -40,7 +40,6 @@ defmodule SharefestApi.Party.Event do
     ])
     |> validate_required([
       :name,
-      :description,
       :start_date,
       :address,
       :latitude,

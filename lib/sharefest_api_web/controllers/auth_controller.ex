@@ -44,11 +44,13 @@ defmodule SharefestApiWeb.AuthController do
   defp _sign_in(conn, username, password, method) do
     Logger.info "Looking for user_name: " <> username
     with {:ok, user} <- Users.authenticate_user(username, password, method) do
-      {:ok, token, claims} =
-        SharefestApi.Authenticator.encode_and_sign(%{id: user.id})
+      {:ok, token, claims} = Authenticator.encode_and_sign(%{id: user.id})
 
       Logger.info "token: " <> inspect(token)
-      render(conn, "authenticated.json", %{user: user, token: token})
+      conn
+      |> Authenticator.Plug.sign_in(user)
+      |> assign(:current_user, user)
+      |> render("authenticated.json", %{user: user, token: token})
 
     else
       {:error, message} -> render(conn, "error.json", %{message: message})
