@@ -52,7 +52,7 @@ mix phx.gen.json Party Gift gifts \
 
 # Amazon categories
 
-mix phx.gen.json Catalogue GiftsCategory gift_categories \
+mix phx.gen.json Catalogue Category categories \
     name:string \
     external_id:string \
     uri_image:string

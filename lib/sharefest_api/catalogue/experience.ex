@@ -11,7 +11,7 @@ defmodule SharefestApi.Catalogue.Experience do
     field :status, :boolean, default: false
     field :uri_image, :string
 
-    # has_many :experience_products, SharefestApi.Catalogue.ExperienceProduct
+    has_many :experience_products, SharefestApi.Catalogue.ExperienceProduct
 
     timestamps()
   end
