@@ -24,8 +24,7 @@ defmodule SharefestApiWeb.Router do
   end
 
   scope "/v1", SharefestApiWeb do
-    # pipe_through [:api, :api_auth]
-    pipe_through [:api]
+    pipe_through [:api, :api_auth]
 
     resources "/events", EventController, except: [:new, :edit] do
       resources "/guests", GuestController, except: [:new, :edit]
@@ -36,6 +35,8 @@ defmodule SharefestApiWeb.Router do
     resources "/suppliers", SupplierController, except: [:new, :edit]
 
     resources "/categories", CategoryController, except: [:new, :edit]
+
+    post "/amazon_search", AmazonSearchController, :search
   end
 
 end
