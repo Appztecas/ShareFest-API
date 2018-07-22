@@ -1,7 +1,7 @@
 %{
   "amazon_product_advertising_client": {:git, "https://github.com/Neovirxp/elixir-amazon-product-advertising-client.git", "f69df2a63716f38696d077784b8184453ecfeca1", []},
   "ampex": {:hex, :ampex, "0.1.1", "3a2cfc644a00c4df113db633a79c748f86ac71097600d9b6b580d574035f4e32", [:mix], [{:httpoison, "~> 0.8.3", [hex: :httpoison, repo: "hexpm", optional: false]}, {:sweet_xml, "~> 0.6.1", [hex: :sweet_xml, repo: "hexpm", optional: false]}], "hexpm"},
-  "apax": {:git, "https://github.com/Neovirxp/apax.git", "194ad716b98b03dee45e217f9ac9613f3cbbafbc", []},
+  "apax": {:git, "https://github.com/Neovirxp/apax.git", "b5eff62ed595b75ca60fb5f78eb9ed6d970590e8", []},
   "base64url": {:hex, :base64url, "0.0.1", "36a90125f5948e3afd7be97662a1504b934dd5dac78451ca6e9abf85a10286be", [:rebar], [], "hexpm"},
   "bcrypt_elixir": {:hex, :bcrypt_elixir, "1.0.8", "940ce8156519574142a3c6e925e7a0eea7367c55b2817b3bd18806b0bbd4254e", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
   "bunt": {:hex, :bunt, "0.2.0", "951c6e801e8b1d2cbe58ebbd3e616a869061ddadcc4863d0a2182541acae9a38", [:mix], [], "hexpm"},

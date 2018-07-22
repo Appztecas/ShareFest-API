@@ -4,11 +4,13 @@ defmodule SharefestApiWeb.AmazonSearchController do
 
   def search(conn, %{"item" => %{"keywords" => keywords}}) do
 
-    System.put_env("AWS_ASSOCIATE", "sharefest02-20")
-
     items = Apax.item_search(keywords)
-    IO.inspect items
+    render(conn, "index.json", items: items)
+  end
 
+  def search(conn, %{"best_sellers" => %{"category" => index, "node" => node}}) do
+
+    items = Apax.best_sellers(index, node)
     render(conn, "index.json", items: items)
   end
 

@@ -23,7 +23,8 @@ defmodule SharefestApiWeb.CategoryView do
       id: category.id,
       name: category.name,
       external_id: category.external_id,
-      uri_image: category.uri_image
+      uri_image: category.uri_image,
+      node: category.node
     }
   end
 end

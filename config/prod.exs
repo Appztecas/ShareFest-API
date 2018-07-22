@@ -20,3 +20,9 @@ config :sharefest_api, SharefestApi.Repo,
 config :sharefest_api, SharefestApi.Authenticator,
   issuer: "appaztecas",
   secret_key: "${AUTH_SECRET_KEY}"
+
+config :apax,
+  AWS_ASSOCIATE: "${AWS_ASSOCIATE}",
+  AWS_KEY: "${AWS_KEY}" ,
+  AWS_SECRET: "${AWS_SECRET}",
+  marketplace_host: "webservices.amazon.com.mx"
