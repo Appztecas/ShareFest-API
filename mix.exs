@@ -47,8 +47,8 @@ defmodule SharefestApi.Mixfile do
       {:comeonin,              "~> 4.0"},
       {:bcrypt_elixir,         "~> 1.0"},
       {:distillery,            "~> 1.5", runtime: false},
-      {:apax,                 git: "https://github.com/Neovirxp/apax.git"}
-      # {:amazon_product_advertising_client, git: "https://github.com/Neovirxp/elixir-amazon-product-advertising-client.git"},
+      {:apax,                 git: "https://github.com/Neovirxp/apax.git"},
+      {:sweet_xml,            "~> 0.6.5"}
     ]
   end
 

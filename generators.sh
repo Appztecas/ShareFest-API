@@ -74,13 +74,14 @@ mix phx.gen.json Catalogue Experience_Product experience_products \
 mix phx.gen.json Catalogue Product_Item product_item \
     code:string \
     status:string \
-    experience_product:references:experience_products Interfaz amigable de creación de invitaciones\
+    experience_product:references:experience_products \
     event:references:events
 
+
+# Guests
 mix phx.gen.json Party Guest guests \
     user:references:users \
     event:references:events \
     email:string \
     phone:string \
     status:string
-

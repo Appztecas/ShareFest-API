@@ -3,11 +3,19 @@ defmodule SharefestApiWeb.GuestView do
   alias SharefestApiWeb.GuestView
 
   def render("index.json", %{guests: guests}) do
-    %{data: render_many(guests, GuestView, "guest.json")}
+    %{
+      success: "true",
+      data: render_many(guests, GuestView, "guest.json"),
+      errors: nil
+    }
   end
 
   def render("show.json", %{guest: guest}) do
-    %{data: render_one(guest, GuestView, "guest.json")}
+    %{
+      success: "true",
+      data: render_one(guest, GuestView, "guest.json"),
+      errors: nil
+    }
   end
 
   def render("guest.json", %{guest: guest}) do

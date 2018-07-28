@@ -4,6 +4,7 @@ defmodule SharefestApi.Party.Event do
   """
   use Ecto.Schema
   import Ecto.Changeset
+  alias SharefestApi.Util.Randomizer
 
   @foreign_key_type Ecto.UUID
 
@@ -48,5 +49,13 @@ defmodule SharefestApi.Party.Event do
       :feasted
     ])
     |> foreign_key_constraint(:user_id)
+    |> generate_code()
   end
+
+  defp generate_code(%Ecto.Changeset{valid?: true, changes:
+                                     %{name: name}} = changeset) do
+    change(changeset, referred_code: Randomizer.randomizer(4))
+  end
+  defp generate_code(changeset), do: changeset
+
 end
